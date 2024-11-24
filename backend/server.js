@@ -9,8 +9,10 @@ import userRoutes from "./routes/user.routes.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
+import { fileURLToPath } from "url";
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // process.env.NODE_ENV !== "production" && dotenv.config();
 if (process.env.NODE_ENV !== "production") {
